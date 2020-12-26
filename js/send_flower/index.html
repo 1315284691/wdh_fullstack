@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代理模式</title>
+</head>
+
+<body>
+    <script>
+        // wdh Object
+        // 对象由两部分组成 属性+方法
+        const wdh = {
+            name: '王殿虎',
+            hometown: '南昌',
+            age: 22,
+            isSingle: true,
+            sendFlower(sender) {
+                sender.receiveFlower(this);
+
+            }
+        }
+        const xm = {
+            name: '小美',
+            xq: 50,
+            receiveFlower(target) {
+                console.log(this.name + '收到了' + target.name + '的花');
+                if (this.xq < 80) {
+                    console.log('我们不约');
+                } else {
+                    console.log('万达走一波');
+                }
+
+            }
+
+        }
+        const xh = {
+                name: '小红',
+                hometown: '南昌',
+                // 代理模式
+                // 接口
+                receiveFlower(target) {
+                    if (target.name == '王殿虎') {
+                        // console.log('我不同意');
+                        setTimeout(() => {
+                            xm.xq = 90;
+                            xm.receiveFlower(target);
+                        }, 2000)
+
+                        // xm.receiveFlower(target);
+                    }
+                }
+            }
+            //
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.mod {
+  width: 265px;
+  margin-bottom: 30px;
+}
+.mod h2 {
+  color: #072;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 150%;
+  font-weight: normal;
+}
+.mod h2 .pl {
+  font-size: 12px;
+  color: #666;
+}
+.mod h2 .pl a {
+  color: #27a;
+}
+.mod ol {
+  margin: 0;
+  padding: 0;
+}
+.mod ol li {
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.mod ol li a {
+  margin-left: 5px;
+  color: #27a;
+}
