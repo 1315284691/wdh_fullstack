@@ -20,4 +20,4 @@ const calculateBonus = (salary, level = 'C') => {
     // return level == 'A' ? salary * 13 : (level == 'S' ? salary * 18 : (level == 'B' ? salary * 14 : salary * 15));
     return strategies[level](salary);
 }
-console.log(calculateBonus());
+console.log(calculateBonus(22000));
