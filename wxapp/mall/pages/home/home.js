@@ -9,7 +9,7 @@ Page({
   data: {
     banners: [],
     keyword: '',
-    noticeList: []
+    noticeList:[]
   },
 
   /**
@@ -48,17 +48,15 @@ Page({
   getCoupons() {},
   async getNotice() {
     // WXAPI
-    //   .noticeList({pageSize: 5})
+    //   .noticeList({pageSize:5})
     //   .then(res => {
     //     console.log(res);
     //     this.setData({
-    //       noticeList: res.data
+    //       noticeList:res.data
     //     })
     //   })
-    const res = await WXAPI.noticeList({pageSize: 5})
-    this.setData({
-      noticeList: res.data
-    })
+    const res = await WXAPI.noticeList({pageSize:5})
+    this.setData({noticeList:res.data})  
   },
   kanjiaGoods() {},
   pingtuanGoods() {},
