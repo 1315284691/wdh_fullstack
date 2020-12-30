@@ -14,7 +14,7 @@ class Book {
 }
 
 const jsDontKnow = new Book('111', 'aa', 'bbb');
-console.log(jsDontKnow.hasOwnProperty('display'));
+console.log(jsDontKnow.hasOwnProperty('display')); //false
 //找到原型对象
 // Book.prototype.display = () => {}
 // Book.prototype.sell = () => {}
@@ -22,14 +22,14 @@ console.log(jsDontKnow.hasOwnProperty('display'));
 //     display: () => {}
 //     sell: () => {}
 // }
-console.log(jsDontKnow.__proto__ == Book.prototype);
+console.log(jsDontKnow.__proto__ == Book.prototype); //true
 //火车头和车身之间
-console.log(jsDontKnow.constructor == Book && Book == Book.prototype.constructor);
+console.log(jsDontKnow.constructor == Book && Book == Book.prototype.constructor); //true
 //基于原型的面向对象
 //封装，继承，多态
 // console.log(jsDontKnow.__proto__ == Book.prototype);
-console.log(jsDontKnow.hasOwnProperty('title'));
-console.log(jsDontKnow.hasOwnProperty('display'));
+console.log(jsDontKnow.hasOwnProperty('title')); //true
+console.log(jsDontKnow.hasOwnProperty('display')); //false
 console.log(jsDontKnow.__proto__.__proto__.__proto__); //null
-console.log(Book.prototype.isPrototypeOf(jsDontKnow));
-console.log("display" in jsDontKnow);
+console.log(Book.prototype.isPrototypeOf(jsDontKnow)); //true
+console.log("display" in jsDontKnow); //true

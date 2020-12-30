@@ -35,4 +35,10 @@
   apifm
   /goods?order=&page=${n}&size=20&keyword=addidas []
 
+- 页面的生命周期 
+  谁先发生， 适合做什么
+  onLoad 加载wxml, wxss, js 最少
+  onShow wxml + wxss 渲染 ， js 还没有执行完 还不能交互的 
+  onRead 
+
  
