@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="people">
+        <p>Wes</p>
+        <p>Kait</p>
+        <p>Randy</p>
+    </div>
+    <script>
+        // const people = document.getElementsByTagName('p');
+        // 不是一个真正的数组，它是一个伪数组
+        // JS 一切皆对象, 
+        // NodeList 是一个假数组 如何变为真数组？
+        const people = Array.from(document.querySelectorAll('.people p'));
+        // const arr = [];
+        // people.forEach(person => {
+        //     arr.push(person);
+        // })
+        const names = people.map(person => person.textContent);
+        console.log(names);
+
+        const deepDish = {
+            pizzaName: 'Deep Dish',
+            size: 'Medium',
+            ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+        }
+        const shoppingList = ['Milk', 'Flour', ...deepDish.ingredients];
+        console.log(shoppingList);
+
+        const name = ['Wes', 'Bos'];
+
+        function sayHi(first, last) {
+            alert(`Hey there ${first} ${last}`);
+        }
+        sayHi(...name);
+    </script>
+</body>
+
+</html>

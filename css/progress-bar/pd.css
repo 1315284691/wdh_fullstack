@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #ccc;
+    left: 45%;
+    top: 200px;
+}
+
+.clip {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border: 10px;
+    border-radius: 50%;
+    background-color: pink;
+    clip: rect(0, 200px, 200px, 100px);
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+}
