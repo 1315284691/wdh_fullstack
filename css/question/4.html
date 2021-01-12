@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body,
+        html {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #header,
+        #footer {
+            height: 50px;
+            background-color: lightblue;
+        }
+        
+        .container {
+            background-color: pink;
+            flex: 1;
+        }
+        
+        .wrap,
+        #left,
+        #right {
+            float: left;
+            height: 100%;
+        }
+        
+        .wrap {
+            background-color: green;
+            width: 100%;
+        }
+        
+        #center {
+            height: 100%;
+            margin-left: 200px;
+            margin-right: 200px;
+            background-color: red;
+        }
+        
+        #left {
+            width: 200px;
+            background-color: orange;
+            margin-left: -100%;
+        }
+        
+        #right {
+            width: 200px;
+            background-color: skyblue;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="wrap">
+            <main id="center" class="column"></main>
+        </div>
+        <nav id="left" class="column"></nav>
+        <aside id="right" class="column"></aside>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>
