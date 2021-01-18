@@ -1,0 +1,11 @@
+linux + docker + k8s
+- 文件系统readme.md 输出到 命令行
+- cat -n
+- git bash 是个小型的linux
+- seq 序列
+
+- 基于996 文件 找到以996开头的这行内容...
+    正则 + linux grep
+- | 管道
+- 匹配到 icu icuuuuuu
+- \^ [^0-9] 不以什么开始
