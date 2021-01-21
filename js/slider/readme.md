@@ -16,3 +16,7 @@
     npm i parcel 安装在当前目录下
 
     -g 全局 不加的话， 当前的项目下，package
+
+- 现代开发工艺
+    parcel live-server + stylus + ... 全部包圆
+    index.html 是入口文件

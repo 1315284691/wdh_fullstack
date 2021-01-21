@@ -1,0 +1,13 @@
+const { Module } = require("webpack");
+
+// 与 parcel 的不同,配置繁琐
+// npm run build webpack    --mode=development
+// 一定会去根文件下找到 webpack.config.js 配置文件
+// module node 模块化
+// import export es6    export default
+module.exports = {
+    entry: './main.js', //入口
+    output: {
+        filename: 'main.js'
+    }
+}
